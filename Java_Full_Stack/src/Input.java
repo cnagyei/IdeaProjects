@@ -8,7 +8,6 @@ public class Input {
 
 		// Capture only one token or word
 		String firstName = sc.next();
-		System.out.println(firstName);
 		String lastName = sc.next();
 
 		//Capture tokens on one line
