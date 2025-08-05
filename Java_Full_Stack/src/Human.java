@@ -1,6 +1,7 @@
 public class Human {
     String name;
     int age;
+    static String bestFood;
 
     public static void averageWorking() {
         System.out.println("An average human works 40 hours per week.");
@@ -24,6 +25,7 @@ class MainClass {
         Human peter = new Human();
         peter.name = "Peter";
         peter.age = 24;
+        Human.bestFood = "Fufu";
         peter.work();
 
         // Create new Human Alice
@@ -34,6 +36,7 @@ class MainClass {
 
         peter.workTogetherWith(alice);
         alice.workTogetherWith(peter);
+        System.out.printf(Human.bestFood);
 
     }
 }
