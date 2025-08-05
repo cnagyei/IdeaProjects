@@ -30,6 +30,5 @@ public class Characters {
         // Perform operation on character here and print the result
         inputChar++;
         System.out.println(inputChar);
-
     }
 }
