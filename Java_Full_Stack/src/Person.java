@@ -98,20 +98,31 @@ class Programmer extends Employee {
 
 class PersonMain {
     public static void main(String[] args) {
-        Programmer p = new Programmer();
+//        Programmer p = new Programmer();
+//
+//        p.setName("Caleb Agyei");
+//        p.setYearOfBirth(1990);
+//        p.setAddress("4 Mallam CP, Gbawe, Accra");
+//        p.setStartDate(new Date());
+//        p.setSalary(1000_000_000L);
+//        p.setProgrammingLanguages(new String[] {"Java", "Swift"});
+//
+//        System.out.println(p.getName());
+//        System.out.println(p.getYearOfBirth());
+//        System.out.println(p.getAddress());
+//        System.out.println(p.getStartDate());
+//        System.out.println(p.getSalary());
+//        System.out.println(Arrays.toString(p.getProgrammingLanguages()));
 
-        p.setName("Caleb Agyei");
-        p.setYearOfBirth(1990);
-        p.setAddress("4 Mallam CP, Gbawe, Accra");
-        p.setStartDate(new Date());
-        p.setSalary(1000_000_000L);
-        p.setProgrammingLanguages(new String[] {"Java", "Swift"});
+        // Superclass reference
+        Person person = new Programmer();
+        person.name = "Nana"; // Can access only fields and methods in superclass, unless those fields and methods overriden by subclass
 
-        System.out.println(p.getName());
-        System.out.println(p.getYearOfBirth());
-        System.out.println(p.getAddress());
-        System.out.println(p.getStartDate());
-        System.out.println(p.getSalary());
-        System.out.println(Arrays.toString(p.getProgrammingLanguages()));
+
+        // Casting
+        Programmer newPerson = (Programmer) person;
+
+        // After successfully casting a superclass to a subclass, we can access subclass-specific members.
+        newPerson.yearOfBirth = 1990;
     }
 }
