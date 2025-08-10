@@ -82,7 +82,7 @@ class Story extends Building {
     }
 }
 
-class castingMain {
+class buildingMain {
     public static void main(String[] args) {
 
         // Superclass reference
