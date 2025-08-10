@@ -24,6 +24,12 @@ class Robot3 {
     // Invokes the 3-arg parameter and assigns the two from this constructor and lifetime to 20
     public Robot3(String name, String model) {
         this(name, model, 20); // This line calls a constructor with 3 args. Afterward, hand over control to 2-arg
+
+//        This way will NOT invoke 3-arg. Everything gets executed right here
+//        this.name = name;
+//        this.model = model;
+//        this.lifetime = 20;
+
         System.out.println("2-arg constructor invoked");
     }
 
@@ -39,19 +45,19 @@ class Robot3 {
 class mainRobot3 {
     public static void main(String[] args) {
         // Use either constructor to create an instance of Robot2
-        System.out.println("+++ First Robot call +++");
+        System.out.println("+++ First Robot call - giving no-arg +++");
         Robot3 anonymous = new Robot3();
 
         System.out.println();
-        System.out.println("+++ Second Robot call +++");
+        System.out.println("+++ Second Robot call - giving 1 arg +++");
         Robot3 bertha = new Robot3("Cal_Robot");
 
         System.out.println();
-        System.out.println("+++ Third Robot call +++");
+        System.out.println("+++ Third Robot call - giving 2 args +++");
         Robot3 abenaa = new Robot3("Cal_Robot", "Model_1");
 
         System.out.println();
-        System.out.println("+++ Fourth Robot call +++");
+        System.out.println("+++ Fourth Robot call - giving 3 args +++");
         Robot3 kwami = new Robot3("Cal_Robot", "Model_1", 10);
     }
 }
