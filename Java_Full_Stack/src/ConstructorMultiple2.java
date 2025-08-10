@@ -1,7 +1,8 @@
 /* Multiple Constructors
  * Bear in mind that you cannot define two constructors with the same number, types, and order of parameters!
- * Remember, the statement for invoking a constructor should be the first statement in the body of a caller
- * constructor
+ * Remember, the statement for invoking a constructor should be the first statement in the body of a caller constructor
+ * Only 'this(...)' construct invokes from another constructor
+ * Multiple constructors may not invoke from others
  */
 class Robot3 {
     String name;
