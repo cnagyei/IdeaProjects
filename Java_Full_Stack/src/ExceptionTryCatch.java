@@ -22,6 +22,8 @@ class TryCatch {
             double d = 2 / 0;
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(e.getClass());
+            System.out.println(e.getClass().getSimpleName());
         }
 
         System.out.println("===========");
