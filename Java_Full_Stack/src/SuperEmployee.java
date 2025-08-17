@@ -27,7 +27,7 @@ class Developer extends Employee2 {
     protected String[] skills;
 
     public Developer(String name, String address, int experience, String mainLanguage, String[] skills) {
-        super(name, address, experience);
+        super(name, address, experience); // Invoking constructor from superclass
         this.mainLanguage = mainLanguage;
         this.skills = skills;
     }
