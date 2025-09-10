@@ -1,0 +1,26 @@
+# Key-Value pairs
+# A key cannot be duplicated
+--- # Separator
+object: Book
+
+metadata:
+  name: The African Oath
+  author: Caleb Nana Agyei
+  genre: Pan Africanism
+
+published:
+  year: 2025
+  country: Ghana
+
+animals:
+  - cat # List
+  - dog
+  - bird
+
+# Alternative
+cities: [Accra, Kumasi, Tamale]
+
+todo: | # Preserve newline
+  work
+  coding and debugging
+  watch GoT
