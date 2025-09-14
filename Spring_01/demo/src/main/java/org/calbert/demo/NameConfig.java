@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Primary;
 public class NameConfig {
 
     @Bean
-    @Primary
     public String getManName() {
         return "Caleb Nana Agyei";
     }
 
     @Bean
+    @Primary
     public String getWomanName() {
         return "Bertha Mongyamose Agyei";
     }
