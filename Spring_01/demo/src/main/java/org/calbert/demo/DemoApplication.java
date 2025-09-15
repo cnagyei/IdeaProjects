@@ -1,13 +1,12 @@
 package org.calbert.demo;
 
-import ch.qos.logback.core.encoder.JsonEscapeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.Arrays;
 
@@ -19,8 +18,9 @@ public class DemoApplication {
 
         System.out.println(("=================="));
 
+        /*
         // Application Context
-        var context = new AnnotationConfigApplicationContext(PersonConfig.class);
+        var context = new AnnotationConfigApplicationContext(Config.class);
         System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
         System.out.println(context.getBean(Person.class));
 
@@ -35,6 +35,12 @@ public class DemoApplication {
         var contextName = new AnnotationConfigApplicationContext(NameConfig.class);
         System.out.println(Arrays.toString(contextName.getBeanDefinitionNames()));
         System.out.println(contextName.getBean(String.class));
+
+        System.out.println(("=================="));
+
+        ConfigurableApplicationContext springRunContext = SpringApplication.run(DemoApplication.class, args);
+        System.out.println(Arrays.toString(springRunContext.getBeanDefinitionNames()));
+         */
 	}
 
     @Bean
