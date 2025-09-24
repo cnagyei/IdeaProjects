@@ -41,6 +41,25 @@ class OptionalExample {
 
         someString = Optional.ofNullable(myName).orElseGet(OptionalEx::getName);
         System.out.println(someString);
+
+        // Conditional - ifPresent
+        Optional<String> companyName = Optional.of("Google"); // Can be .empty()
+        companyName.ifPresent((someName) -> System.out.println(someName.length())); // Will not print anything
+        // if Optional is empty
+        companyName.ifPresent(System.out::println); // Will not print anything if Optional is empty
+
+        Optional<String> noName = Optional.empty();
+        noName.ifPresent(System.out::println);
+
+        // Conditional - ifPresentOrElse
+        Optional<String> animalName = Optional.of("Gyata");
+        animalName.ifPresentOrElse(System.out::println, () -> System.out.println("No name"));
+
+        Optional<String> noAnimalName = Optional.empty();
+        noAnimalName.ifPresentOrElse(
+                (myAnimal) -> System.out.println(myAnimal.length()),
+                () -> System.out.println("No name")
+        );
     }
 }
 
