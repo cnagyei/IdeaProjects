@@ -19,7 +19,11 @@ public class CollectionsEx {
         // A tricky example
         List<Integer> singleton = Collections.singletonList(1);
 
-        Collections.sort(singleton);
-        Collections.shuffle(singleton);
+        Collections.sort(singleton); // No exception because it is a singleton. List.of(1) will fail
+        Collections.shuffle(singleton); // No exception because it is a singleton. List.of(1) will fail
+        Collections.sort(immutableList); // Throws exception because more than 1 member
+
+        List<Integer> listOfIntegers = new ArrayList<>();
+        //Collections.asLifoQueue(listOfIntegers); // Queue not List
     }
 }
