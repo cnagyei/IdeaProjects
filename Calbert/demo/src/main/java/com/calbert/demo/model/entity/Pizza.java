@@ -1,4 +1,4 @@
-package com.calbert.demo;
+package com.calbert.demo.model.entity;
 
 public class Pizza {
     private String name;

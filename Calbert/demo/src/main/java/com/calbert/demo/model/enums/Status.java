@@ -1,4 +1,4 @@
-package com.calbert.demo.enums;
+package com.calbert.demo.model.enums;
 
 public enum Status {
     SHIPPED,

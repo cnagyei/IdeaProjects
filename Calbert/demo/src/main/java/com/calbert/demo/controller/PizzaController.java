@@ -1,5 +1,6 @@
-package com.calbert.demo;
+package com.calbert.demo.controller;
 
+import com.calbert.demo.model.entity.Pizza;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

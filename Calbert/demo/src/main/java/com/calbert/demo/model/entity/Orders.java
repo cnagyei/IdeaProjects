@@ -1,6 +1,6 @@
-package com.calbert.demo;
+package com.calbert.demo.model.entity;
 
-import com.calbert.demo.enums.Status;
+import com.calbert.demo.model.enums.Status;
 import jakarta.persistence.*;
 
 import java.time.Instant;
@@ -12,7 +12,9 @@ public class Orders {
 
     // 1
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "order_id")
+    private long orderId;
 
     // 2
     @Column(name = "product_type") // Use when db column name differs from class field
@@ -42,4 +44,7 @@ public class Orders {
     @Enumerated(EnumType.STRING)
     @Column(name = "order_status")
     private Status orderStatus;
+
+    @Transient
+    private String orderProgress;
 }
