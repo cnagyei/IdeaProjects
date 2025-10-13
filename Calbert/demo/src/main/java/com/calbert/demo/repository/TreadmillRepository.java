@@ -1,9 +1,6 @@
-package com.calbert.demo.model.entity;
+package com.calbert.demo.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.calbert.demo.model.entity.Treadmill;
 import org.springframework.data.repository.CrudRepository;
 
-public interface TreadmillRepository extends CrudRepository<Treadmill, String> {
-
-    Treadmill findTreadmillByCodeContaining(String dd);
-}
+public interface TreadmillRepository extends CrudRepository<Treadmill, String> {}
