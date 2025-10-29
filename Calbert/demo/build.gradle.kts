@@ -26,6 +26,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-freemarker")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("com.fasterxml.jackson.core:jackson-databind:2.20.0")
+	implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml")
 
 	runtimeOnly("com.mysql:mysql-connector-j")
 }

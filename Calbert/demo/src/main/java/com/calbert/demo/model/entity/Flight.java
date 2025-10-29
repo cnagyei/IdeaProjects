@@ -1,12 +1,12 @@
 package com.calbert.demo.model.entity;
 
-public class FlightInfo {
+public class Flight {
     private int id;
     private String from;
     private String to;
     private String gate;
 
-    public FlightInfo(int id, String from, String to, String gate) {
+    public Flight(int id, String from, String to, String gate) {
         this.id = id;
         this.from = from;
         this.to = to;
