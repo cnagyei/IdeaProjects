@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practicing JavaScript</title>
+</head>
+<body>
+<div id="header">Welcome to DOm</div>
+<br>
+<div id="content">
+    <p class="note">Note 1</p>
+    <p class="note">Note 2</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</div>
+<div class="container">
+    <p>First container</p>
+    <p>Second container</p>
+    <p>Third container</p>
+</div>
+<script>
+    // getElementById
+    const headerElement = document.getElementById("header");
+    headerElement.style.color = "blue"; // Changes text color to blue
+
+    // getElementByClassName
+    const notes = document.getElementsByClassName("note");
+    console.log(notes);
+    for (let i = 0; i < notes.length; i++) {
+        notes[i].style.fontWeight = "bold";
+    }
+
+    // getElementByTagName
+    const listItems = document.getElementsByTagName("ul");
+    for (let item of listItems) {
+        item.style.color = "green";
+        item.style.listStyleType = "square"; // Changes bullet points to square
+    }
+
+    // querySelector
+    const firstParagraph = document.querySelector(".container p"); // Returns first element that matches selector
+    firstParagraph.style.color = "blue";
+    firstParagraph.style.fontWeight = "bold";
+    firstParagraph.innerText = "First paragraph";
+
+    // querySelectorAll
+    const paragraphs = document.querySelectorAll(".container p");
+    paragraphs.forEach((paragraph) => {
+        paragraph.innerText = "I got changed by querySelectorAll()";
+        paragraph.append(". When the trumpet sounds");
+        paragraph.style.backgroundColor = "grey";
+        paragraph.style.borderColor = "red";
+        paragraph.style.color = "cyan";
+    });
+</script>
+
+</body>
+</html>

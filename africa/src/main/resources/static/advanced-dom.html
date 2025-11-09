@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced DOM</title>
+</head>
+<body>
+
+<script>
+
+    // Node insertion methods
+    document.body.innerHTML = "<ul id='list'><li>The Node</li></ul>"; // creates a list
+    let list = document.getElementById("list");
+
+    let startNode = document.createElement("p");
+    startNode.textContent = "The start";
+
+    list.before(startNode);
+
+    let firstNode = document.createElement("li");
+    firstNode.textContent = "First node";
+    list.prepend(firstNode);
+
+    let lastNode = document.createElement("li");
+    lastNode.textContent = "Last node";
+    list.append(lastNode);
+
+    let endNode = document.createElement("p");
+    endNode.textContent = "End";
+    list.after(endNode);
+
+    // insertAdjacentHTML()
+    document.body.innerHTML = "<div><ul id='myList'><li>First item</li></ul></div>";
+    let doc = document.getElementById("myList");
+
+    doc.insertAdjacentHTML("beforebegin", "<p id='firstPara'>List of items</p>");
+    doc.insertAdjacentHTML("afterbegin", "<li>Before first item</li>");
+    doc.insertAdjacentHTML("beforeend", "<li>Last item</li>");
+    doc.insertAdjacentHTML("afterend", "<p>After last item</p>");
+
+    // replaceWith()
+    let newParagraph = document.createElement("p");
+    newParagraph.textContent = "Abenaa is a good girl";
+
+    let firstPara = document.getElementById("firstPara");
+    firstPara.replaceWith(newParagraph);
+
+    // Clone list
+    oldList = document.getElementById("myList");
+    let newList = oldList.cloneNode(true);
+
+    doc.append(newList);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Events</title>
+</head>
+<body>
+
+<script>
+    // document.addEventListener("keydown", function(event) {
+    //     if (event.code === "AltRight") {
+    //         console.log(event);
+    //     }
+    // });
+
+    // document.addEventListener("keydown", e => {
+    //     console.log(e.code);
+    // })
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "W") {
+            console.log("W is pressed");
+        }
+    })
+</script>
+</body>
+</html>

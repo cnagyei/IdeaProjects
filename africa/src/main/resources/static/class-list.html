@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classList</title>
+</head>
+<body>
+    <div class="classOne classTwo">classList</div>
+
+    <span class="elementOne text"></span>
+
+    <button type="button" class="login"></button>
+
+    <script>
+        let divElement = document.querySelector(".classTwo");
+        console.log(divElement.classList);
+
+        // add
+        divElement.classList.add("classThree", "classFour");
+        console.log(divElement.classList);
+
+        // remove
+        divElement.classList.remove("classOne", "classThree");
+        console.log(divElement.classList);
+
+        // replace
+        divElement.classList.replace("classTwo", "class20");
+        console.log(divElement.classList);
+
+        // toggle - removes class if present or adds it
+        divElement.classList.toggle("classFour");
+        console.log(divElement.classList);
+
+        divElement.classList.toggle("class49");
+        console.log(divElement.classList);
+
+        // contains
+        console.log(divElement.classList.contains("classOne"));
+        console.log(divElement.classList.contains("class49"));
+
+        // length
+        console.log(divElement.classList.length);
+
+        // span classList
+        let spanElement = document.querySelector('.elementOne');
+        spanElement.classList.replace('elementOne', 'elementTwo');
+        console.log(spanElement.classList);
+
+        // button classList
+        let buttonElement = document.querySelector("button");
+        console.log(buttonElement.classList.contains("button"))
+    </script>
+</body>
+</html>

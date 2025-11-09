@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listeners</title>
+</head>
+<body>
+<div>
+    <button id="myButton">Click Me</button>
+</div>
+
+<script>
+    function handleClick() {
+        alert("Button Clicked");
+    }
+
+    // Add event listener
+    const button = document.getElementById('myButton');
+    button.addEventListener("dblclick", handleClick, { capture: true });
+
+    // Remove event listener
+    //button.removeEventListener("dblclick", handleClick);
+
+    // createElement()
+    let myElement = document.createElement("div");
+    let errorElement = document.createElement("Hello");
+
+    console.log(myElement);
+    console.log(errorElement);
+
+    // createTextNode()
+    let myText = document.createTextNode("I am learning DOM methods!");
+    let justTextNode = document.createTextNode("div");
+
+    console.log(myText);
+    console.log(justTextNode);
+</script>
+</body>
+</html>
