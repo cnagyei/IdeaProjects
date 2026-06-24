@@ -1,7 +1,6 @@
 package com.oath.africa.business;
 
 import com.oath.africa.persistence.AnimalRepository;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -62,5 +61,13 @@ public class AnimalService {
         }
 
         animalRepository.save(animal);
+    }
+
+    public List<Animal> getAnimalByHabitat(String habitat) {
+        return animalRepository.findAnimalByHabitat(habitat);
+    }
+
+    public List<Animal> getAllAnimalsByQuery() {
+        return animalRepository.getAllAnimalsByQuery();
     }
 }

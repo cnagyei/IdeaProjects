@@ -1,8 +1,9 @@
 package com.oath.africa.persistence;
 
+import com.oath.africa.business.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PersonRepository extends JpaRepository {
+public interface PersonRepository extends JpaRepository<Person, Long> {
 }

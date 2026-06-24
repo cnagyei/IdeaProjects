@@ -1,5 +1,6 @@
 package com.oath.africa.presentation;
 
+import com.oath.africa.business.Animal;
 import com.oath.africa.business.AnimalDTO;
 import com.oath.africa.business.AnimalService;
 import org.springframework.web.bind.annotation.*;
@@ -40,5 +41,15 @@ public class AnimalController {
     public String patchAnimal(@PathVariable Integer id, @RequestBody AnimalDTO animalDTO) {
         animalService.patchAnimalById(id, animalDTO);
         return String.format("Animal with id %d updated successfully!", id);
+    }
+
+    @GetMapping("/animal-query/{habitat}")
+    public List<Animal> getAnimalByHabitat(@PathVariable String habitat) {
+        return animalService.getAnimalByHabitat(habitat);
+    }
+
+    @GetMapping("/animals-all")
+    public List<Animal> getAllAnimalsByQuery() {
+        return animalService.getAllAnimalsByQuery();
     }
 }
